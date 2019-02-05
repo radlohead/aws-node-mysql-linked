@@ -17,7 +17,7 @@ app.get(['/', 'index.html'], (req, res, next) => {
 });
 
 app.get('/process', (req, res, next) => {
-	res.send(process.env);
+	// res.send(process.env);
 });
 
 app.get('/board', (req, res, next) => {
