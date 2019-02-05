@@ -1,5 +1,5 @@
-const mysql = require('mysql');
 const express = require('express');
+const mysql = require('mysql2');
 const app = express();
 const port = process.env.PORT || 3000;
 const options = {
@@ -14,10 +14,6 @@ const connection = mysql.createConnection(options);
 
 app.get(['/', 'index.html'], (req, res, next) => {
 	res.send('index page');
-});
-
-app.get('/process', (req, res, next) => {
-	// res.send(process.env);
 });
 
 app.get('/board', (req, res, next) => {
